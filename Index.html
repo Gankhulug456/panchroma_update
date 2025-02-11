@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+    <title>Panchroma Color APP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/gotham-pro-font@1.0.0/fonts.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="mainContainer">
+      <h2>COLORS</h2>
+
+      <!-- Dropdown menus for mobile -->
+      <div id="dropdowns">
+        <select id="finishCategory">
+          <option value="panchroma">Panchroma</option>
+          <option value="gradient">Gradient</option>
+          <option value="dual">Dual</option>
+        </select>
+
+        <select id="finishDropdown"></select>
+      </div>
+
+      <div id="photoSection">
+        <img
+          id="selectedImage"
+          src="polyman/polyman/Matte/Panchroma™ Matte Army Red.png"
+          alt="Selected Finish"
+        />
+        <div id="colorName"></div>
+        <div class="color-section">
+          <div class="color-icon-container" id="colorIcons"></div>
+        </div>
+      </div>
+      <div id="name">
+        <div id="colorName2"></div>
+      </div>
+
+      <select id="colorDropdown" class="color-dropdown"></select>
+
+      <div id="detailsSection">
+        <div class="finish-icon-container" id="finishIcons">
+          <h3>Panchroma</h3>
+          <div class="finish-icon-row" id="finishIconsRow1"></div>
+          <div class="divider"></div>
+          <h3>Gradient</h3>
+          <div class="finish-icon-row" id="finishIconsRow2"></div>
+          <div class="divider"></div>
+          <h3>Panchroma Dual</h3>
+          <div class="finish-icon-row" id="finishIconsRow3"></div>
+          <div class="divider"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

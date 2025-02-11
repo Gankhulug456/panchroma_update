@@ -1,0 +1,295 @@
+body {
+  font-family: "Gotham Pro", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+}
+
+#mainContainer {
+  display: flex;
+  width: 100%;
+}
+
+#photoSection {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin-top: 5%;
+}
+
+#selectedImage {
+  max-width: 100%;
+  max-height: 75%;
+  border-radius: 15px;
+  margin-top: 65px;
+  margin-bottom: 20px;
+  opacity: 1;
+}
+
+#detailsSection {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #fff;
+}
+
+.finish-icon-container {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.color-section {
+  margin-top: 20px;
+  width: 65%;
+  text-align: center;
+}
+
+.color-icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}
+
+.finish-icon,
+.color-icon {
+  cursor: pointer;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.finish-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 10%;
+  height: 10%;
+  margin: 5px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.img-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-finish-img {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+}
+
+.overlay-tick {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 60%;
+  height: 60%;
+  display: none;
+}
+
+.name-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.finish-name {
+  text-align: center;
+  font-size: 12px;
+  color: #333;
+}
+
+.finish-icon:hover {
+  transform: scale(1.1);
+  border-color: #e5e5e5;
+}
+
+.color-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+.color-icon {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.tick-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  height: 25px;
+  pointer-events: none;
+}
+
+.color-icon:hover {
+  transform: scale(1.1);
+  border-color: #bbbbbb;
+}
+
+#shopButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #fd502a;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#shopButton:hover {
+  background-color: #e04825;
+}
+
+.finish-icon-row {
+  display: flex;
+  justify-content: start;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+h3 {
+  justify-self: self-start;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+h2 {
+  display: inline;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  font-size: 35px;
+  font-weight: 400;
+}
+
+.divider {
+  width: 95%;
+  height: 2px;
+  background-color: #f4f4f4;
+  margin: 20px 0;
+}
+
+#colorName {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: 300;
+}
+#dropdowns {
+  display: none;
+}
+.color-dropdown {
+  display: none;
+}
+#colorName2 {
+  display: none;
+}
+/* Media Queries for Mobile */
+@media only screen and (max-width: 768px) {
+  /* Hide details section on mobile */
+  #detailsSection {
+    display: none;
+  }
+
+  #colorName {
+    display: none;
+  }
+  #name {
+    display: flex;
+    justify-content: center;
+  }
+  #colorName2 {
+    display: block;
+  }
+
+  /* Add dropdowns for selecting finish categories and finishes */
+  #dropdowns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 35%;
+    margin-left: 5%;
+  }
+
+  #mainContainer {
+    flex-direction: column;
+  }
+
+  select {
+    padding: 5px 10px;
+    margin: 5px 0px;
+    margin-right: 10px;
+    font-size: 16px;
+    height: 90%;
+    border-radius: 30px;
+    border: 1px solid #4281ff;
+    color: #4281ff;
+    text-align: center;
+  }
+
+  #photoSection {
+    margin-left: 10%;
+    width: 80%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+
+  #colorIcons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    width: 50%;
+  }
+
+  .color-icon-container {
+    gap: 10px;
+  }
+
+  #selectedImage {
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  /* Move the dropdown below the color icons */
+  .color-dropdown {
+    display: block; /* Ensure it's displayed */
+    margin-top: 20px; /* Adds space between color icons and dropdown */
+    margin-left: 10%;
+    width: 80%; /* Makes it full width on mobile */
+    max-height: 50px;
+    padding: 10px; /* Gives some padding to the dropdown */
+    font-size: 16px;
+    border-radius: 30px;
+    border: 1px solid #4281ff;
+    color: #4281ff;
+  }
+}
